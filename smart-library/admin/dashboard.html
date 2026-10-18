@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Admin Dashboard | Smart Library</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { font-family: Arial, sans-serif; margin: 0; background: #f4f7f4; color: #222; }
+    header { background: #315b41; color: #fff; padding: 14px 20px; display: flex;
+      justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; }
+    header a { color: #fff; }
+    main { max-width: 1000px; margin: 0 auto; padding: 16px; }
+    nav { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 16px; }
+    nav button { padding: 10px 16px; border: 0; border-radius: 8px; background: #dfe9e1;
+      cursor: pointer; font-size: 15px; }
+    nav button.active { background: #315b41; color: #fff; }
+    section { display: none; background: #fff; padding: 16px; border-radius: 12px;
+      box-shadow: 0 4px 16px #0001; }
+    section.active { display: block; }
+    .table-wrap { overflow-x: auto; }
+    table { border-collapse: collapse; width: 100%; min-width: 560px; }
+    th, td { text-align: left; padding: 8px; border-bottom: 1px solid #e3e8e3; font-size: 14px; }
+    form { display: grid; gap: 8px; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      margin-bottom: 16px; }
+    input, select, textarea { padding: 9px; border: 1px solid #ccd5cc; border-radius: 6px;
+      width: 100%; font: inherit; }
+    button.btn { padding: 9px 14px; border: 0; border-radius: 6px; background: #315b41;
+      color: #fff; cursor: pointer; }
+    button.danger { background: #b42318; }
+    button.small { padding: 5px 10px; font-size: 13px; }
+    #message { margin: 0 0 12px; font-weight: 600; min-height: 22px; }
+    .ok { color: #276749; } .err { color: #b42318; }
+    .overdue { color: #b42318; font-weight: 700; }
+  </style>
+</head>
+<body>
+  <header>
+    <strong>Smart Library Admin</strong>
+    <a href="../index.html">Back to site</a>
+  </header>
+
+  <main>
+    <p id="message" role="status"></p>
+
+    <nav>
+      <button data-tab="books" class="active">Books</button>
+      <button data-tab="inventory">Inventory</button>
+      <button data-tab="users">Users</button>
+      <button data-tab="transactions">Transactions</button>
+    </nav>
+
+    <section id="tab-books" class="active">
+      <h2 id="form-title">Add a book</h2>
+      <form id="book-form">
+        <input name="title" placeholder="Title" maxlength="200" required>
+        <input name="author" placeholder="Author" maxlength="150" required>
+        <input name="genre" placeholder="Genre / category" maxlength="100" required>
+        <input name="total_copies" type="number" min="0" max="1000" placeholder="Total copies" required>
+        <textarea name="description" placeholder="Description" rows="2"></textarea>
+        <div>
+          <button class="btn" type="submit">Save</button>
+          <button class="btn danger" type="button" id="cancel-edit" hidden>Cancel edit</button>
+        </div>
+      </form>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Title</th><th>Author</th><th>Genre</th><th>Copies</th><th></th></tr></thead>
+          <tbody id="books-body"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="tab-inventory">
+      <h2>Inventory by category</h2>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Genre</th><th>Titles</th><th>Total copies</th><th>Available</th><th>Borrowed</th></tr></thead>
+          <tbody id="inventory-body"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="tab-users">
+      <h2>Users</h2>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Name</th><th>Email</th><th>Role</th><th>Active borrows</th><th>Joined</th></tr></thead>
+          <tbody id="users-body"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="tab-transactions">
+      <h2>Transactions</h2>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>User</th><th>Book</th><th>Borrowed</th><th>Due</th><th>Returned</th><th>Status</th></tr></thead>
+          <tbody id="transactions-body"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <script src="../js/admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,334 @@
+/* Smart Library - Carrd-inspired theme
+   Load AFTER style.css and add class="theme" to <body>. */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap');
+
+body.theme {
+  --navy: #ffffff;
+  --green: #ffffff;
+  --gold: #e8c27a;
+  --cream: transparent;
+  --muted: #cfd2de;
+  --line: rgba(255, 255, 255, 0.22);
+  --card: rgba(58, 62, 80, 0.92);
+  --shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
+
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  font-weight: 300;
+  color: #ffffff;
+  min-height: 100vh;
+  background:
+    linear-gradient(rgba(35, 40, 70, 0.86), rgba(130, 35, 45, 0.62)),
+    url('../images/campus.jpg') center / cover fixed,
+    #2c3047;
+}
+
+/* ---------- Typography ---------- */
+body.theme h1,
+body.theme h2,
+body.theme h3 {
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-weight: 400;
+  color: #ffffff;
+}
+
+body.theme .hero h1 {
+  font-size: clamp(26px, 3.4vw, 44px);
+  letter-spacing: 0.14em;
+  line-height: 1.3;
+}
+
+body.theme .hero h1 span,
+body.theme .intro h2 span {
+  color: #ffffff;
+  font-style: normal;
+  opacity: 0.8;
+}
+
+body.theme .intro h2,
+body.theme .section-heading h2,
+body.theme .catalog-heading h2,
+body.theme .closing-banner h2 {
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  font-size: clamp(20px, 2.6vw, 30px);
+  letter-spacing: 0.18em;
+}
+
+body.theme .eyebrow {
+  color: #d9dce6;
+  letter-spacing: 0.3em;
+}
+
+body.theme p,
+body.theme label,
+body.theme .field-description {
+  color: #d9dce6;
+}
+
+body.theme a {
+  color: inherit;
+}
+
+/* ---------- Navbar ---------- */
+body.theme .navbar,
+body.theme header {
+  background: rgba(30, 33, 50, 0.92);
+  border-bottom: 1px solid var(--line);
+}
+
+body.theme .brand,
+body.theme .brand-accent {
+  color: #ffffff;
+}
+
+body.theme .brand-icon {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+body.theme .navbar nav a {
+  color: #d9dce6;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-size: 12px;
+}
+
+body.theme .navbar nav a:hover {
+  color: #ffffff;
+}
+
+body.theme .nav-button {
+  border: 1px solid #ffffff;
+  border-radius: 999px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 11px;
+  color: #ffffff;
+}
+
+body.theme #auth-bar {
+  background: rgba(255, 255, 255, 0.14) !important;
+  color: #ffffff;
+  border-radius: 999px;
+}
+
+body.theme #auth-bar a {
+  color: #ffffff;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* ---------- Buttons (outlined pills) ---------- */
+body.theme .button,
+body.theme button {
+  background: transparent;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  border-radius: 999px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 11px;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+body.theme .button-primary {
+  background: rgba(255, 255, 255, 0.14);
+}
+
+body.theme .button:hover,
+body.theme .button-primary:hover,
+body.theme .button-light:hover,
+body.theme button:hover {
+  background: rgba(255, 255, 255, 0.28);
+  color: #ffffff;
+}
+
+body.theme .button-light {
+  background: transparent;
+  border-color: #ffffff;
+  color: #ffffff;
+}
+
+body.theme button:disabled,
+body.theme .button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+body.theme button.danger {
+  color: #ffb4b4;
+  border-color: #ffb4b4;
+}
+
+/* ---------- Main page sections ---------- */
+body.theme .assessment-section,
+body.theme .recommendations-section,
+body.theme .catalog-section {
+  background: transparent;
+}
+
+body.theme .intro,
+body.theme .assessment-section,
+body.theme .recommendations-section,
+body.theme .catalog-section {
+  border-top: 1px solid var(--line);
+}
+
+body.theme .hero-art {
+  background: rgba(255, 255, 255, 0.07);
+}
+
+body.theme .art-orbit {
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+body.theme .art-label {
+  color: #d9dce6;
+}
+
+body.theme .floating-note {
+  background: rgba(58, 62, 80, 0.95);
+  color: #ffffff;
+}
+
+body.theme .hero-note,
+body.theme .hero-content > p {
+  color: #d9dce6;
+}
+
+/* ---------- Cards ---------- */
+body.theme .assessment-card,
+body.theme .book-card,
+body.theme .closing-banner,
+body.theme .auth-card,
+body.theme main > section[id^="tab-"] {
+  background: var(--card);
+  color: #ffffff;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+}
+
+body.theme .assessment-card legend {
+  color: #ffffff;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+}
+
+body.theme .book-details h3 {
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  text-transform: none;
+  letter-spacing: 0.02em;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+body.theme .book-genre {
+  background: rgba(255, 255, 255, 0.14);
+  color: #ffffff;
+}
+
+body.theme .book-footer {
+  border-top-color: var(--line);
+  color: #cfd2de;
+}
+
+body.theme .match-score {
+  color: var(--gold);
+}
+
+body.theme .count-pill {
+  background: rgba(255, 255, 255, 0.14);
+  color: #ffffff;
+}
+
+body.theme .empty-state {
+  border-color: var(--line);
+  color: #cfd2de;
+}
+
+body.theme .footer {
+  border-top: 1px solid var(--line);
+}
+
+/* ---------- Inputs ---------- */
+body.theme input,
+body.theme select,
+body.theme textarea {
+  background: rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  font-family: inherit;
+  accent-color: #ffffff;
+}
+
+body.theme input::placeholder,
+body.theme textarea::placeholder {
+  color: #b8bccb;
+}
+
+body.theme select option {
+  color: #000000;
+}
+
+body.theme .search-box,
+body.theme .filter-box {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+body.theme .search-box input,
+body.theme .filter-box select {
+  background: transparent;
+  border: 0;
+}
+
+body.theme .search-box > span {
+  color: #ffffff;
+}
+
+/* ---------- Messages ---------- */
+body.theme .message,
+body.theme .error,
+body.theme .err,
+body.theme .overdue {
+  color: #ff9b9b;
+}
+
+body.theme .success,
+body.theme .ok {
+  color: #9be3b4;
+}
+
+/* ---------- Admin dashboard ---------- */
+body.theme nav button {
+  background: transparent;
+}
+
+body.theme nav button.active {
+  background: #ffffff;
+  color: #3a3e50;
+}
+
+body.theme th,
+body.theme td {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+  color: #ffffff;
+}
+
+body.theme th {
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-weight: 500;
+  font-size: 12px;
+}
+
+/* ---------- Titles on login / register ---------- */
+body.theme .auth-card h1 {
+  font-size: 1.3rem;
+  text-align: center;
+}

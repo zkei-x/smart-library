@@ -1,0 +1,149 @@
+
+.assessment-section {
+  padding: 64px 20px;
+  background: #f4f3ee;
+  color: #24352c;
+}
+
+.assessment-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.assessment-eyebrow {
+  color: #52745d;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.assessment-section h2 {
+  font-size: clamp(26px, 4vw, 38px);
+  margin: 12px 0;
+}
+
+.assessment-intro,
+.assessment-hint {
+  color: #647067;
+  line-height: 1.7;
+}
+
+#assessment-form fieldset {
+  border: 1px solid #d8ded7;
+  border-radius: 14px;
+  padding: 22px;
+  margin: 24px 0;
+  background: #fff;
+}
+
+#assessment-form legend {
+  padding: 0 8px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.assessment-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.assessment-options label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px;
+  border: 1px solid #e0e5df;
+  border-radius: 9px;
+  cursor: pointer;
+}
+
+.assessment-options label:has(input:checked) {
+  background: #eaf2e9;
+  border-color: #65876c;
+}
+
+.assessment-options input {
+  accent-color: #416b4d;
+}
+
+#assessment-form select {
+  width: 100%;
+  max-width: 420px;
+  padding: 13px;
+  margin-top: 12px;
+  border: 1px solid #cbd4ca;
+  border-radius: 8px;
+  background: white;
+  font: inherit;
+}
+
+.assessment-submit,
+.assessment-retake {
+  padding: 14px 22px;
+  border: none;
+  border-radius: 9px;
+  background: #315b41;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.assessment-submit:hover,
+.assessment-retake:hover {
+  background: #244632;
+}
+
+#assessment-message {
+  color: #a52d2d;
+  font-weight: 600;
+}
+
+.personalized-results {
+  margin-top: 42px;
+}
+
+.recommendation-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+  margin: 24px 0;
+}
+
+.recommendation-card {
+  padding: 20px;
+  border: 1px solid #dce3dc;
+  border-radius: 12px;
+  background: white;
+  box-shadow: 0 4px 14px #2035260b;
+}
+
+.recommendation-card h3 {
+  margin-top: 0;
+  color: #315b41;
+}
+
+.recommendation-card p {
+  line-height: 1.6;
+  color: #56645a;
+}
+
+.recommendation-score {
+  font-weight: 700;
+  color: #315b41 !important;
+}
+
+.assessment-retake {
+  background: #647067;
+}
+
+@media (max-width: 600px) {
+  .assessment-section {
+    padding: 40px 14px;
+  }
+
+  #assessment-form fieldset {
+    padding: 16px;
+  }
+}

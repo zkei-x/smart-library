@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Discover books that match your interests with Smart Library.">
+  <title>Smart Library | Discover Your Next Read</title>
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/assessment.css">
+
+  <script src="js/assessment.js" defer></script>
+</head>
+
+<body>
+  <header class="navbar">
+    <a href="index.html#home" class="brand">
+      <span class="brand-icon">▤</span>
+      <span>Smart<span class="brand-accent">Library</span></span>
+    </a>
+
+    <nav aria-label="Main navigation">
+      <a href="index.html#home">Home</a>
+      <a href="index.html#discover">Discover</a>
+      <a href="index.html#catalog">Book Catalog</a>
+    </nav>
+
+    <a class="nav-button" href="index.html#discover">Find My Books ↗</a>
+  </header>
+
+  <main>
+    <!-- HOMEPAGE HERO -->
+    <section id="home" class="hero">
+      <div class="hero-content">
+        <span class="eyebrow">YOUR NEXT CHAPTER STARTS HERE</span>
+
+        <h1>Not sure what to read? <span>We'll help you find it.</span></h1>
+
+        <p>
+          Discover books that match your interests, your goals,
+          and the stories you love. Your next favorite book is waiting.
+        </p>
+
+        <div class="hero-actions">
+          <a class="button button-primary" href="index.html#discover">
+            Find My Next Read <span>→</span>
+          </a>
+          <a class="button button-light" href="index.html#catalog">
+            Explore the library
+          </a>
+        </div>
+
+        <div class="hero-note">
+          <span class="status-dot"></span>
+          A more personal way to discover books
+        </div>
+      </div>
+
+      <div class="hero-art" aria-label="Illustration of a stack of books">
+        <div class="art-orbit orbit-one"></div>
+        <div class="art-orbit orbit-two"></div>
+        <div class="art-label label-top">A WORLD OF STORIES</div>
+
+        <div class="book-stack">
+          <div class="book book-green">
+            <span>GROW<br>BEYOND</span>
+            <small>Personal Growth</small>
+          </div>
+          <div class="book book-gold">
+            <span>THE ART<br>OF WONDER</span>
+            <small>Explore the Unknown</small>
+          </div>
+          <div class="book book-red">
+            <span>HIDDEN<br>CHAPTERS</span>
+            <small>Every story matters</small>
+          </div>
+        </div>
+
+        <div class="floating-note">✦ Read. Explore. Grow.</div>
+      </div>
+    </section>
+
+    <!-- INTRODUCTION -->
+    <section class="intro section-wrap">
+      <div>
+        <span class="eyebrow">READING, REIMAGINED</span>
+        <h2>A library that gets <span>you.</span></h2>
+      </div>
+
+      <p>
+        Everyone reads differently. Tell us what interests you
+        and we'll help you discover books worth your time.
+      </p>
+    </section>
+
+    <!-- PERSONALIZED ASSESSMENT -->
+    <section id="discover" class="assessment-section section-wrap">
+      <div class="section-heading">
+        <span class="eyebrow">YOUR PERSONAL READING PROFILE</span>
+        <h2>Let's find your kind of book.</h2>
+        <p>Answer a few questions so we can personalize your recommendations.</p>
+      </div>
+
+      <form id="assessment-form" class="assessment-card">
+
+        <!-- QUESTION 1 -->
+        <fieldset>
+          <legend>1. What genres do you enjoy?</legend>
+          <p class="field-description">Select at least one.</p>
+
+          <div class="assessment-options">
+            <label><input type="checkbox" name="genres" value="Fantasy"> Fantasy</label>
+            <label><input type="checkbox" name="genres" value="Romance"> Romance</label>
+            <label><input type="checkbox" name="genres" value="Mystery"> Mystery</label>
+            <label><input type="checkbox" name="genres" value="Science Fiction"> Science Fiction</label>
+            <label><input type="checkbox" name="genres" value="Horror"> Horror</label>
+            <label><input type="checkbox" name="genres" value="Thriller"> Thriller</label>
+            <label><input type="checkbox" name="genres" value="Biography"> Biography</label>
+            <label><input type="checkbox" name="genres" value="History"> History</label>
+            <label><input type="checkbox" name="genres" value="Self-Help"> Self-Help</label>
+            <label><input type="checkbox" name="genres" value="Personal Development"> Personal Development</label>
+            <label><input type="checkbox" name="genres" value="Adventure"> Adventure</label>
+            <label><input type="checkbox" name="genres" value="Educational"> Educational</label>
+          </div>
+        </fieldset>
+
+        <!-- QUESTION 2 -->
+        <fieldset>
+          <legend>2. What topics interest you?</legend>
+          <p class="field-description">Choose all the topics you find interesting.</p>
+
+          <div class="assessment-options">
+            <label><input type="checkbox" name="interests" value="Technology"> Technology</label>
+            <label><input type="checkbox" name="interests" value="Science"> Science</label>
+            <label><input type="checkbox" name="interests" value="Business"> Business</label>
+            <label><input type="checkbox" name="interests" value="Relationships"> Relationships</label>
+            <label><input type="checkbox" name="interests" value="Creativity"> Creativity</label>
+            <label><input type="checkbox" name="interests" value="Personal Growth"> Personal Growth</label>
+            <label><input type="checkbox" name="interests" value="Adventure"> Adventure</label>
+            <label><input type="checkbox" name="interests" value="Education"> Education</label>
+          </div>
+        </fieldset>
+
+        <!-- QUESTION 3 -->
+        <fieldset>
+          <legend>3. What is your main reading goal?</legend>
+
+          <div class="assessment-options">
+            <label><input type="radio" name="goal" value="Entertainment" required> Entertainment</label>
+            <label><input type="radio" name="goal" value="Learning"> Learn something new</label>
+            <label><input type="radio" name="goal" value="Skills"> Improve my skills</label>
+            <label><input type="radio" name="goal" value="Personal Growth"> Personal growth</label>
+            <label><input type="radio" name="goal" value="Academic"> Academic study</label>
+          </div>
+        </fieldset>
+
+        <!-- QUESTION 4 -->
+        <fieldset>
+          <legend>4. What type of book do you prefer?</legend>
+
+          <select name="bookType" required>
+            <option value="">Choose your preferred book type</option>
+            <option value="Fiction">Fiction</option>
+            <option value="Nonfiction">Nonfiction</option>
+            <option value="Educational">Educational</option>
+            <option value="Any">No preference</option>
+          </select>
+        </fieldset>
+
+        <!-- QUESTION 5 -->
+        <fieldset>
+          <legend>5. What reading difficulty do you prefer?</legend>
+
+          <select name="difficulty" required>
+            <option value="">Choose your preferred reading level</option>
+            <option value="Beginner">Beginner-friendly</option>
+            <option value="Intermediate">Intermediate</option>
+            <option value="Advanced">Advanced</option>
+            <option value="Any">No preference</option>
+          </select>
+        </fieldset>
+
+        <p id="assessment-message" class="message" role="status" aria-live="polite"></p>
+
+        <button type="submit" class="button button-primary assessment-submit">
+          Find My Books →
+        </button>
+      </form>
+    </section>
+
+    <!-- PERSONALIZED RECOMMENDATIONS -->
+    <section id="recommendations" class="recommendations-section section-wrap hidden" hidden>
+      <div class="section-heading">
+        <span class="eyebrow">PICKED FOR YOUR INTERESTS</span>
+        <h2>Your next great read.</h2>
+        <p id="recommendation-summary">Books selected for you.</p>
+      </div>
+
+      <div id="recommendation-list" class="book-grid"></div>
+
+      <button id="retake-assessment" class="button button-light edit-button" type="button">
+        Retake Assessment
+      </button>
+    </section>
+
+    <!-- BOOK CATALOG -->
+    <section id="catalog" class="catalog-section section-wrap">
+      <div class="catalog-heading">
+        <div>
+          <span class="eyebrow">THE COLLECTION</span>
+          <h2>Explore the catalog.</h2>
+          <p>Find a story, learn something new, or follow your curiosity.</p>
+        </div>
+
+        <span id="book-count" class="count-pill">Loading...</span>
+      </div>
+
+      <div class="catalog-controls">
+        <label class="search-box">
+          <span aria-hidden="true">⌕</span>
+          <input id="book-search" type="search" placeholder="Search by title or author..." aria-label="Search books">
+        </label>
+
+        <label class="filter-box">
+          <span class="sr-only">Filter by genre</span>
+          <select id="genre-filter">
+            <option value="All">All genres</option>
+          </select>
+        </label>
+      </div>
+
+      <div id="catalog-list" class="book-grid"></div>
+
+      <p id="empty-catalog" class="empty-state hidden">
+        No books found. Try another search or genre.
+      </p>
+    </section>
+
+    <!-- CLOSING BANNER -->
+    <section class="closing-banner">
+      <div>
+        <span class="eyebrow">YOUR NEXT ADVENTURE AWAITS</span>
+        <h2>Every great journey begins with a book.</h2>
+        <p>Find the one that speaks to you.</p>
+      </div>
+
+      <a href="index.html#discover" class="button button-primary">
+        Discover Your Books →
+      </a>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <a href="index.html#home" class="brand">
+      <span class="brand-icon">▤</span>
+      <span>Smart<span class="brand-accent">Library</span></span>
+    </a>
+
+    <p>Read with purpose. Discover with curiosity.</p>
+    <span>Smart Library · Local Demo</span>
+  </footer>
+</body>
+</html>
